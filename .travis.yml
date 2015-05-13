@@ -10,4 +10,6 @@ branches:
   only:
     - master
     - travis
-cache: pip 
+cache: 
+  directories:
+    - $HOME/.cache/pip
