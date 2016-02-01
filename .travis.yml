@@ -3,9 +3,9 @@ sudo: false
 python:
   - '2.7'
 install:
-  - pip wheel phonenumbers -w $HOME/wheelhouse --find-links $HOME/wheelhouse
-  - pip install phonenumbers --use-wheel --find-links $HOME/wheelhouse
-  - pip install beautifulsoup4 requests websocket-client coverage pytest
+  - pip wheel phonenumbers regex coverage -w $HOME/wheelhouse --find-links $HOME/wheelhouse
+  - pip install phonenumbers regex coverage --use-wheel --no-index --find-links $HOME/wheelhouse
+  - pip install beautifulsoup4 requests websocket-client pytest
 script:
   - python -W default::Warning -m pytest test
 branches:
